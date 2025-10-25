@@ -1,0 +1,126 @@
+/* src/components/Hero.css */
+.hero {
+    background-color: #f6f8e7;
+    font-family: 'Segoe UI', sans-serif;
+    min-height: 100vh;
+    padding: 20px 40px;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    color: orange;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .nav-links li {
+    cursor: pointer;
+    font-weight: 500;
+  }
+  
+  .nav-links .active {
+    background-color: #092b19;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 8px;
+  }
+  
+  .hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 60px;
+  }
+  
+  .text-section {
+    flex: 1;
+  }
+  
+  .text-section h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    line-height: 1.2;
+    color: #042100;
+  }
+  
+  .tagline {
+    color: green;
+    font-size: 1.2rem;
+    margin: 15px 0;
+  }
+  
+  .input-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 300px;
+  }
+  
+  .input-form input {
+    padding: 12px;
+    border: 2px solid green;
+    border-radius: 10px;
+    background: transparent;
+    outline: none;
+  }
+  
+  .input-form button {
+    padding: 12px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .image-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .image-section img {
+    width: 250px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .plant-info {
+    background-color: #e8f5e9;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 300px;
+  }
+  
+  .plant-info h3 {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .plant-info p {
+    font-size: 0.9rem;
+    color: #444;
+    margin-bottom: 15px;
+  }
+  
+  .read-more {
+    background-color: #092b19;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+  }
+  
