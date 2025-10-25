@@ -43,25 +43,25 @@ app.post("/api/analyze", async (req, res) => {
    analysis =  ollamaResponse.data.response;
     console.log("&&&&&&&&&&&&&&&b   analysis::",analysis);
     // Step 2: Send email with Nodemailer
-    const transporter = nodemailer.createTransport({
-      service: "gmail",
-      auth: {
-        user: "patri.sudhir@gmail.com",
-        pass: "PATRIrao@304",
-      },
-    });
+    // const transporter = nodemailer.createTransport({
+    //   service: "gmail",
+    //   auth: {
+    //     user: "patri.sudhir@gmail.com",
+    //     pass: "PATRIrao@304",
+    //   },
+    // });
 
-    const mailOptions = {
-      from: "patri.sudhir@gmail.com",
-      to: "sudheendra.patri@gmail.com",
-      subject: `Details about the name "${name}"`,
-      text: analysis,
-    };
+    // const mailOptions = {
+    //   from: "patri.sudhir@gmail.com",
+    //   to: "sudheendra.patri@gmail.com",
+    //   subject: `Details about the name "${name}"`,
+    //   text: analysis,
+    // };
 
     //await transporter.sendMail(mailOptions);
-    res.json({ reply: analysis });
-    console.log(`📧 Email sent to ${email}`);
-    res.json({ success: true, message: "Email sent successfully!", analysis });
+    res.json({ message: analysis });
+    // console.log(`📧 Email sent to ${email}`);
+    // res.json({ success: true, message: "Email sent successfully!", analysis });
   } catch (error) {
     console.error("❌ Error:", error.message);
     res.status(500).json({ error: "Something went wrong" });

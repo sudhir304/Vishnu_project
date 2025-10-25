@@ -12,7 +12,8 @@ const Hero = () => {
 
   const [formData, setFormData] = useState({ name: '', email: '' });
 
-
+  
+  const [serverMessage, setServerMessage] = useState("");
 // const navigate = useNavigate();
 
   const handleChange = (e) =>
@@ -23,7 +24,10 @@ const Hero = () => {
     try {
       const res = await axios.post('http://localhost:5000/api/analyze', formData);
       alert(res.data.message);
-      setFormData({ name: '', email: '' });
+      setServerMessage(res.data.message); 
+      alert ("****", serverMessage);
+      
+      setFormData({ name: '', location: '', email: '' });
     } catch (err) {
       alert(err.response?.data?.error || 'Submission failed');
     }
@@ -60,6 +64,12 @@ const Hero = () => {
           onChange={handleChange}
         />
         <input
+          name="location"
+          placeholder="Location........"
+          value={formData.location}
+          onChange={handleChange}
+        />
+        <input
           name="email"
           placeholder="Email........"
           value={formData.email}
@@ -74,6 +84,7 @@ const Hero = () => {
           <div className="plant-info">
             <h3>Plant Name</h3>
             <p>
+              {serverMessage}
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
             </p>
             <button className="read-more">Read More</button>
