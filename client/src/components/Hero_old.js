@@ -24,6 +24,7 @@ const Hero = () => {
     try {
       const res = await axios.post('http://localhost:5000/api/analyze', formData);
       alert(res.data.message);
+      
       setServerMessage(res.data.message); 
       alert ("****", serverMessage);
       
@@ -85,7 +86,7 @@ const Hero = () => {
             <h3>Plant Name</h3>
             <p>
               {serverMessage}
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+              
             </p>
             <button className="read-more">Read More</button>
           </div>
